@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #080808;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+header{
+	
+	width: 100%;
+	height: 100vh;
+	background-image: url(images/Header/firplace101quality.jpg);
+	background-position: center;
+	background-size: cover;
+    margin-right: 100px;
+}
+#container{
+padding: 20px 5%; 
+scroll-behavior: smooth;
+}
+.navigation{
+    align-content: flex-end;
+}
+nav{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+nav ul li{
+	display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+
+}
+nav ul li a{
+    color: aqua;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height :3px ;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+}
+.header-text h1{
+    margin-top: 15px;
+    font-size: 50px;
+}
+/* about */
+#about{
+    padding: 80px;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis: 35%;
+
+}
+.col1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.col2{
+    flex-basis: 60%;
+}
+.SubT{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+
+}
+.titiles{
+    display: flex;
+    margin: 20px 0 30px;
+    
+}
+.tl{
+    margin-right: 30px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tl::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    transition: 0.6s;
+}
+.tl.t1::after{
+    width: 75%;
+}
+.tab-content ul li{
+    list-style: none;
+    margin: 14px;
+
+}
+.tab-content ul li span{
+    color: #ff004f;
+    font-size: 15px;
+}
+.tab-content{
+    display: none;
+}
+.tab-content.active-tab{
+    display: block;
+}
+.rowone{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.rowtwo{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.c1{
+    flex-basis: 33%;
+}
+.c2{
+    flex-basis: 33%;
+}
+.c3{
+    flex-basis: 33%;
+}
+.c1 img{
+    width: 100%;
+    height: auto;
+    
+}
+.c2 img{
+    width: 100%;
+    height: auto;
+}
+.c3 img{
+    width: 100%;
+    height: auto;
+}
+/* contact */
+.contact-left{
+    flex-basis: 35%;
+    
+}
+.contact-right{
+    flex-basis: 65%;
+    
+}
+.contact-left p{
+    margin-top: 30px;
+
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 30px;
+    font-size: 20px;
+}
+.icons{
+margin-top: 20px;
+}
+.icons a{
+    text-decoration: none;
+    font-size: 20px;
+    margin-right: 20px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.contact-right form{
+    width: 90%;
+}
+form input, form text,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 20px;
+    margin: 20px 0 0 ;
+    color: #fff;
+    font-size: 15px;
+    border-radius: 10px;
+   
+}
+.btn{
+    display: onclick;
+    background: #ff004f;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+ .f1{
+    border: #ff004f;
+    border-width: 100%;
+    box-sizing: border-box;
+}
+nav .fa-regular{
+    display: none;
+}
+/* for sml scn */
+
+
+
+
+
+@media only screen and (max-width: 600px){
+header{
+    background-image: url(images/fireplace2.jpg);
+    width: 100%;
+}
+nav .fa-regular{
+    display: block;
+}
+.header-text{
+    margin-top: 100%;
+    font-size: 16px;
+
+}
+.header-text h1{
+    font-size: 30px;
+}
+nav ul{
+    background:#ff004f ;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+
+}
+nav ul li{
+    display: block;
+    margin: 25px;
+}
+nav ul.fa-regular{
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    cursor: pointer;
+}
+.SubT{
+    font-size: 40px;
+
+}
+.col1..col2{
+    flex-basis: 100%;
+
+}
+.col1{
+    margin-bottom: 30px;
+}
+.col2{
+    font-size: 14px;
+}
+}
+/* .slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+  }
+
+  .slider-image {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  } */
